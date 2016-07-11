@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<style>
+.tooltip {
+    position: relative;
+    display: inline-block;
+}
+.tooltip .tooltiptext {
+    visibility: hidden;
+    width: 60px;
+    background-color: white;
+    border: 2px solid black;
+    color: black;
+    text-align: center;
+    border-radius: 6px;
+    padding: 3px 0;
+    position: absolute;
+    z-index: 1;
+    bottom: 125%;
+    left: 50%;
+    margin-left: -35px;
+    opacity: 0;
+    transition: opacity 1s;
+}
+.tooltip .tooltiptext::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: #555 transparent transparent transparent;
+}
+.tooltip:hover .tooltiptext {
+    visibility: visible;
+    opacity: 1;
+}
+#bar{
+    position:relative;
+    margin-left: 5px;
+}
+.bar1 { 
+    background-color: #ffa0a0; 
+    width: 20px; 
+    height: 74px;    
+    top: 50px; 
+    left: 10px; 
+    position: absolute; 
+}
+.bar2 { 
+    background-color: #ffd4a0; 
+    width: 20px; 
+    height: 45px;     
+    top: 50px; 
+    left: 30px;
+    position: absolute;
+ }
+.bar3 { 
+    background-color: #fff79e; 
+    width: 20px; 
+    height: 30px;      
+    top: 50px; 
+    left: 50px; 
+    position: absolute;
+ }
+</style>
+<body>
+<h3>Move the mouse over a colored bar</h3>
+<div id="bar" class="bar1 tooltip"><span class="tooltiptext">value <b>74</b></span></div>
+<div id="bar" class="bar2 tooltip"><span class="tooltiptext">value <b>45</b></span></div>
+<div id="bar" class="bar3 tooltip"><span class="tooltiptext">value <b>30</b></span></div>
+</body>
+</html>
